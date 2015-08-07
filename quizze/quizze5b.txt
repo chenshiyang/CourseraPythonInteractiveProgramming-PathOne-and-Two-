@@ -1,0 +1,87 @@
+Question 1
+Which of the following expressions corresponds to a dictionary with no elements?
+
+Answer: {}    dict()
+
+Question 2
+Given an existing dictionary favorites, what Python statement adds the key "fruit" to this dictionary with the corresponding value "blackberry"?
+
+Answer: favorites["fruit"] = "blackberry"
+
+Question 3
+Keys in a dictionary can have which of the following types?
+
+Answer:
+Strings   Tuples  Booleans
+
+Question 4
+Values in a dictionary can have which of the following types?
+
+Answer: Lists Numbers Strings Booleans
+
+Question 5
+We often want to loop over all the key/value pairs in a dictionary. Assume the variable my_dict stores a dictionary. One way of looping like this is as follows:
+
+for key in my_dict:
+    value = my_dict[key]
+    бн
+However, there is a better way. We can instead write the following:
+
+for key, value in ???:
+    бн
+
+What code should replace the question marks so that the two forms are equivalent? Refer to the video on dictionaries or the CodeSkulptor documentation.  
+Answer: my_dict.items()
+
+
+Question 6
+Conceptually, the purpose of a dictionary is to represent a relationship between two collections of data бк each key in the dictionary 
+is related to one value. Which of the following situations are instances of such a relationship?
+
+Do not include situations where you have to introduce additional information in order to fit them into such a relationship.
+
+Answer: Storing a sensor's data samples and the time of each sample
+Storing where each person lives
+
+Question 7
+Assume we have the following definition:
+
+def is_even(number):
+    """Returns whether the number is even."""
+    return number % 2 == 0
+Which of the following will compute a list of all of the even elements of list my_list?
+
+Answer: [number for number in my_list if is_even(number)]
+[n for n in my_list if is_even(n)]
+
+Question 8
+You have the following code. The goal is to display a portion of the image, rescaling it to fill the canvas.
+
+import simplegui
+
+frame_size = [200, 200]
+image_size = [1521, 1818]
+
+def draw(canvas):
+    canvas.draw_image(image, image_size,
+                      [image_size[0] / 2, image_size[1] / 2],
+                      [frame_size[0] / 2, frame_size[1] / 2],
+                      frame_size)
+
+frame = simplegui.create_frame("test", frame_size[0], frame_size[1])
+frame.set_draw_handler(draw)
+image = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/gutenberg.jpg")
+
+frame.start()
+
+Answer: The source arguments in draw_image are incorrect. We are trying to load pixels that are not within the image, and thus the draw fails.
+
+Question 9
+Write a CodeSkulptor program that loads and draws the following image:
+
+http://commondatastorage.googleapis.com/codeskulptor-assets/alphatest.png
+with a source center of [220, 100] and a source size of [100, 100]. What one word appears in the canvas? If a letter is capitalized in the image, enter it as a capital.
+
+Note that you do have to position the image as stated to see the correct word.
+
+Answer: tin

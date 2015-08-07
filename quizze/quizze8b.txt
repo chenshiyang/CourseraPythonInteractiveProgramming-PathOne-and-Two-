@@ -1,0 +1,63 @@
+Question 1
+Which of the following is valid notation for a set in CodeSkulptor?
+
+set([])	
+set([1, 2, 3])	
+
+Question 2
+Which of the following operations can mutate set s? You may want to try some examples in CodeSkulptor and refer to the documentation.
+
+
+s.update(s)		
+s.add(x)		
+
+Question 3
+Which operation corresponds to the following description? Refer to the CodeSkulptor documentation.
+
+Given two sets, s and t, we want a new set containing all the elements that are in one of the sets, but not both of the sets. For example, if s has the elements 1, 2, 3, 4, and t has the elements 3, 4, 5, 6, then the result should have the elements 1, 2, 5, 6.
+		
+s.symmetric_difference(t)	
+
+Question 4
+A set is an unordered collection of distinct elements. Which of the following problem contexts represent instances of this idea?
+
+Group of distinct cities
+
+Question 5
+How many frames per second are typically projected in modern movies? How many times per second is the draw handler typically called in CodeSkulptor?
+
+Enter two numbers representing these frame rates in frames per second. Use only spaces to separate the numbers.
+
+Answer for Question 5
+24 60
+
+Question 6
+The bonus portion of this week's mini-project defines and uses a Sprite class to support animations. Each animated sprite includes an associated tiled image, each of whose sub-images are drawn in turn during the process of animating the sprite.
+
+What attribute (also known as a field) of this Sprite class can be used to select the appropriate sub-image to draw during this animation process? (If you are stuck, review the bonus phase in the mini-project description.)
+		
+age	
+
+Question 7
+Consider a horizontally-tiled image where each sub-image has the same size. If each sub-image is of size 60×90 (in pixels), what is the horizontal distance (in pixels) between the centers of adjacent sub-images?
+
+60
+
+Question 8
+How many distinct numbers are printed by the following code? Enter the count.
+
+def next(x):
+    return (x ** 2 + 79) % 997
+
+x = 1
+for i in range(1000):
+    print x
+    x = next(x)
+Hint: Consider how editing the code to use a set could help solve the question.
+
+46	
+
+Question 9
+Which instructor exhibits the best coding style?
+		
+Scott		His code is well commented and well structured. And he wears awesome looking ties.

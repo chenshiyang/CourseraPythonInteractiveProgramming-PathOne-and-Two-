@@ -1,0 +1,183 @@
+Question 1
+Every class definition should include an initializer method. What is the name of the initializer method?
+
+Refer to the first object-oriented programming video.
+
+Note: While you can get away with not having an initializer method, 
+doing so almost always implies using techniques beyond the scope of this 
+course or bad program design. So, beginners should always define an initializer method.
+
+Answer: __init__ (2 underscores on each side)
+
+
+Question 2
+In Python, what is the main difference between a function and a method?
+
+Answer: Functions are defined outside of classes, while methods are defined inside of and part of classes.
+
+Question 3
+As an example class, consider the following code from one of the videos:
+
+class Character:
+    def __init__(self, name, initial_health):
+        self.name = name
+        self.health = initial_health
+        self.inventory = []
+        
+    def __str__(self):
+        s  = "Name: " + self.name
+        s += " Health: " + str(self.health)
+        s += " Inventory: " + str(self.inventory)
+        return s
+    
+    def grab(self, item):
+        self.inventory.append(item)
+        
+    def get_health(self):
+        return self.health
+        
+Answer: An object (instance) of the Character class
+
+Question 4
+Assume you have the following class and method definition, parts of which have been omitted.
+
+class My_Class:
+    бн
+
+    def my_method(self, value1, value2):
+        """Assumes its inputs are two values and does something."""
+        бн
+
+my_object = My_Class()
+The last line defines the variable my_object as an object of My_Class class. 
+Which of the following is proper syntax for using the method on this object?
+
+Answer: my_object.my_method(1, 2)
+
+Question 5
+We want to have balls that move around. Which of the following designs represents encapsulation best?
+
+Answer:
+class Ball:
+    def __init__(self, c, r):
+        self.center = c
+        self.radius = r
+
+    def move(self, move_vector):
+        """Changes the position of the ball by the given vector."""
+        self.center[0] += move_vector[0]
+        self.center[1] += move_vector[1]
+
+
+# balls : A list of Ball objects
+balls = бн
+
+
+Question 6
+A common feature in many object-oriented languages is method overloading. In this quiz question, you will learn by example what overloading is and whether or not Python supports it.
+
+Turn the following English description into code.
+
+Start a class definition. We'll call the class Overload.
+Define an __init__ method. Along with the standard self, it has one parameter. The method does nothing 
+useful for this example бк use the Python do-nothing statement pass for the body.
+Define a second __init__ method. Along with self, it has two parameters. This method also does nothing useful.
+Outside of the class, we want to create two Overload objects. If Python supports 
+overloading, you will be able to create an Overload object with one argument, 
+and create another Overload object with two arguments. Does Python support overloading?
+
+Answer: No
+
+Question 7
+First, complete the following class definition:
+
+class BankAccount:
+    def __init__(self, initial_balance):
+        """Creates an account with the given balance."""
+        self.balance = initial_balance
+        self.fee = 0
+    def deposit(self, amount):
+        """Deposits the amount into the account."""
+        self.balance += amount
+    def withdraw(self, amount):
+        """
+        Withdraws the amount from the account.  Each withdrawal resulting in a
+        negative balance also deducts a penalty fee of 5 dollars from the balance.
+        """
+        self.balance -= amount
+        if self.balance < 0:
+            self.fee += 5
+            self.balance -= 5
+    def get_balance(self):
+        """Returns the current balance in the account."""
+        return self.balance
+    def get_fees(self):
+        """Returns the total fees ever deducted from the account."""
+        return self.fee
+account1 = BankAccount(20)
+account1.deposit(10)
+account2 = BankAccount(10)
+account2.deposit(10)
+account2.withdraw(50)
+account1.withdraw(15)
+account1.withdraw(10)
+account2.deposit(30)
+account2.withdraw(15)
+account1.deposit(5)
+account1.withdraw(10)
+account2.withdraw(10)
+account2.deposit(25)
+account2.withdraw(15)
+account1.deposit(10)
+account1.withdraw(50)
+account2.deposit(25)
+account2.deposit(25)
+account1.deposit(30)
+account2.deposit(10)
+account1.withdraw(15)
+account2.withdraw(10)
+account1.withdraw(10)
+account2.deposit(15)
+account2.deposit(10)
+account2.withdraw(15)
+account1.deposit(15)
+account1.withdraw(20)
+account2.withdraw(10)
+account2.deposit(5)
+account2.withdraw(10)
+account1.deposit(10)
+account1.deposit(20)
+account2.withdraw(10)
+account2.deposit(5)
+account1.withdraw(15)
+account1.withdraw(20)
+account1.deposit(5)
+account2.deposit(10)
+account2.deposit(15)
+account2.deposit(20)
+account1.withdraw(15)
+account2.deposit(10)
+account1.deposit(25)
+account1.deposit(15)
+account1.deposit(10)
+account1.withdraw(10)
+account1.deposit(10)
+account2.deposit(20)
+account2.withdraw(15)
+account1.withdraw(20)
+account1.deposit(5)
+account1.deposit(10)
+account2.withdraw(20)
+print account1.get_balance(), account1.get_fees(), account2.get_balance(), account2.get_fees()
+
+Answer: -60 75
+
+Question 8
+We will again use the BankAccount class from the previous problem. You should be able to use the same definition for both problems.
+
+Of course, a bank with only one account will go out of business, so we want our 
+BankAccount class to work correctly with many accounts. Naturally, each bank account should have its 
+own balance, with deposits and withdrawals going to the appropriate account. Similarly, the penalty 
+fees for each account should be kept separate.
+
+Answer: -55 45 45 20
